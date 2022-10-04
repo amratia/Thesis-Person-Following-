@@ -189,7 +189,7 @@ class DetectorActivity : CameraActivity(), OnImageAvailableListener {
 
                             result.location = location
                             if(result.title.equals("person") ){
-                                if(location.left > 400){ //move right
+                                if(location.left > 325){ //move right
                                     //top bigger
                                     funcSend(3);
                                     Log.e("(move right) top :", location.top.toString());
@@ -198,7 +198,7 @@ class DetectorActivity : CameraActivity(), OnImageAvailableListener {
                                     Log.e("(move right) right :", location.right.toString());
                                     Toast.makeText(applicationContext,"Person on the right",Toast.LENGTH_SHORT).show()
                                 }
-                                if(location.right < 300){ //move left
+                                if(location.right < 325){ //move left
                                     // bottom bigger
                                     funcSend(4);
                                     Log.e("(move left) top :", location.top.toString());
@@ -274,7 +274,7 @@ class DetectorActivity : CameraActivity(), OnImageAvailableListener {
         private const val TF_OD_API_LABELS_FILE = "file:///android_asset/labelmap.txt"
         private val MODE = DetectorMode.TF_OD_API
         // Minimum detection confidence to track a detection.
-        private const val MINIMUM_CONFIDENCE_TF_OD_API = 0.6f
+        private const val MINIMUM_CONFIDENCE_TF_OD_API = 0.55f
         private const val MAINTAIN_ASPECT = false
         private val DESIRED_PREVIEW_SIZE = Size(640, 480)
         private const val TEXT_SIZE_DIP = 10f
